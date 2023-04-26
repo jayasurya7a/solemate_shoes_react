@@ -1,12 +1,28 @@
+import React from 'react';
 import './App.css';
-import Home from './Home';
+import { Routes,Route } from 'react-router-dom';
+import Signup from './pages/Signup';
+import Login from './pages/Login';
+import Home from './pages/Home';
+import { AuthProvider } from './Auth';
+import PrivateRoute from './PrivateRoute';
 
 function App() {
   return (
-    <div >
-      <h1 className="text-3xl font-bold text-gray-900">Hello world</h1>
-      <Home />
-    </div>
+    <AuthProvider>
+    <Routes>
+      <Route path='/login' element={<Login />} />
+      <Route path='/signup' element={<Signup />} />
+      <Route 
+        path='/*'
+        element={
+          <PrivateRoute>
+            <Home />
+          </PrivateRoute>
+        }
+      />
+    </Routes>
+    </AuthProvider>
   );
 }
 

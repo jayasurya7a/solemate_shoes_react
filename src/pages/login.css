@@ -1,0 +1,59 @@
+.container {
+  width: 500px;
+  margin: 50px auto;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.loginpage .form-group {
+  margin-bottom: 20px;
+}
+
+.loginpage label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.loginpage input[type="email"],
+.loginpage input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.loginpage button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.loginpage button[type="submit"]:hover {
+  background-color: #444;
+}
+
+.loginpage .invalid-feedback {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
