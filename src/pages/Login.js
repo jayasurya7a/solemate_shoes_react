@@ -9,7 +9,7 @@ const Login = ({history}) => {
 	const navigate = useNavigate();
 
   return (
-    <div className="container">
+    <div className="container w-1/3">
       <Formik
         initialValues={{ email: '', password: '' }}
         validate={values => {
@@ -31,7 +31,6 @@ const Login = ({history}) => {
         	  // console.log(Values);
         	  try{
         	   	await signInWithEmailAndPassword(auth,Values.email,Values.password);
-        	   	alert('logged in');
         	   	navigate('/',{replace:true})
        		  }catch(error){
        		   	alert(error);

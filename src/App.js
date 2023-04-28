@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import { AuthProvider } from './Auth';
 import PrivateRoute from './PrivateRoute';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         path='/*'
         element={
           <PrivateRoute>
+            <Navbar />
             <Home />
           </PrivateRoute>
         }
