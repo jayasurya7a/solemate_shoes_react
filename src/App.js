@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import { AuthProvider } from './Auth';
 import PrivateRoute from './PrivateRoute';
 import Navbar from './components/Navbar';
+import Products from './pages/Products';
 
 function App() {
   return (
@@ -14,6 +15,15 @@ function App() {
     <Routes>
       <Route path='/login' element={<Login />} />
       <Route path='/signup' element={<Signup />} />
+      <Route 
+          path='/products'
+          element={
+            <PrivateRoute>
+              <Navbar />
+              <Products />
+            </PrivateRoute>
+          }
+        />
       <Route 
         path='/*'
         element={
@@ -24,7 +34,7 @@ function App() {
         }
       />
     </Routes>
-    </AuthProvider>
+    </AuthProvider> 
   );
 }
 
